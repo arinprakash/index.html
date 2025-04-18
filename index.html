@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arin Prakash | Digital Business Student</title>
+  <title>Arin Prakash | IIM Bangalore Student</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #1a237e;      /* Dark blue */
+      --primary: #1a237e;      /* IIM Blue */
       --primary-light: #303f9f;
       --text: #212121;        /* Dark grey */
       --text-light: #757575;  /* Medium grey */
       --bg: #f5f5f5;         /* Light grey */
       --card: #ffffff;
-      --accent: #e8eaf6;     /* Very light blue */
+      --accent: #e8eaf6;     /* IIM Light blue */
       --border-radius: 12px;
       --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --section-gap: 2.5rem;
     }
 
     * {
@@ -76,8 +75,12 @@
     .title {
       font-size: 1.2rem;
       font-weight: 400;
-      opacity: 0.9;
       margin-bottom: 1.5rem;
+    }
+
+    .institution {
+      font-weight: 600;
+      color: var(--accent);
     }
 
     .contact-info {
@@ -94,7 +97,7 @@
       font-size: 0.95rem;
     }
 
-    /* Main Content - Symmetric Layout */
+    /* Main Content */
     .main-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -102,18 +105,8 @@
       padding: 3rem 2.5rem;
     }
 
-    .left-column, .right-column {
-      display: flex;
-      flex-direction: column;
-      gap: var(--section-gap);
-    }
-
-    /* Section Styling */
     .section {
-      background: var(--card);
-      padding: 1.8rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
+      margin-bottom: 2.5rem;
     }
 
     .section-title {
@@ -132,7 +125,6 @@
       font-size: 1.1rem;
     }
 
-    /* Content Cards */
     .content-card {
       margin-bottom: 1.5rem;
     }
@@ -151,7 +143,11 @@
       color: var(--primary-light);
     }
 
-    /* Lists */
+    .degree {
+      font-weight: 500;
+      color: var(--text);
+    }
+
     .styled-list {
       list-style: none;
       padding-left: 0;
@@ -172,7 +168,6 @@
       line-height: 1;
     }
 
-    /* Skills */
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -188,7 +183,6 @@
       font-weight: 500;
     }
 
-    /* Interests */
     .interests-container {
       display: flex;
       flex-wrap: wrap;
@@ -205,26 +199,14 @@
       font-size: 0.9rem;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       .main-content {
         grid-template-columns: 1fr;
         padding: 2rem 1.5rem;
-        gap: 1.5rem;
       }
       
       .header {
         padding: 2.5rem 1.5rem;
-      }
-      
-      .contact-info {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-      }
-      
-      .name {
-        font-size: 2rem;
       }
     }
   </style>
@@ -236,7 +218,7 @@
         <i class="fas fa-user-graduate"></i>
       </div>
       <h1 class="name">Arin Prakash</h1>
-      <p class="title">Digital Business Student at IIM Bangalore</p>
+      <p class="title">BBA Student in <span class="institution">Digital Business & Entrepreneurship</span><br>at Indian Institute of Management Bangalore</p>
       <div class="contact-info">
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
@@ -259,12 +241,15 @@
         <section class="section">
           <h2 class="section-title"><i class="fas fa-graduation-cap"></i>Education</h2>
           <div class="content-card">
-            <div class="card-title"><i class="fas fa-university"></i>IIM Bangalore</div>
-            <p>BBA in Digital Business Entrepreneurship</p>
+            <div class="card-title"><i class="fas fa-university"></i>Indian Institute of Management Bangalore</div>
+            <p class="degree">Bachelor of Business Administration (BBA)<br>Digital Business & Entrepreneurship</p>
+            <ul class="styled-list">
+              <li>Completed AGILE COIL Program: Social Entrepreneurship</li>
+            </ul>
           </div>
           <div class="content-card">
             <div class="card-title"><i class="fas fa-certificate"></i>UCMAS</div>
-            <p>Abacus Graduate</p>
+            <p>Abacus Graduate Certification</p>
           </div>
         </section>
 
@@ -273,13 +258,15 @@
           <div class="content-card">
             <div class="card-title"><i class="fas fa-store"></i>ChocoBloom</div>
             <ul class="styled-list">
-              <li>Created and sold chocolates as part of a ₹250 venture</li>
+              <li>Launched and managed a self-funded chocolate venture</li>
+              <li>Handled production, branding and sales operations</li>
             </ul>
           </div>
           <div class="content-card">
             <div class="card-title"><i class="fas fa-hands-helping"></i>Mission Parivartan</div>
             <ul class="styled-list">
-              <li>Volunteered for environmental sustainability initiatives</li>
+              <li>Volunteered for environmental sustainability programs</li>
+              <li>Participated in community welfare initiatives</li>
             </ul>
           </div>
         </section>
@@ -290,18 +277,18 @@
         <section class="section">
           <h2 class="section-title"><i class="fas fa-trophy"></i>Achievements</h2>
           <ul class="styled-list">
-            <li>Final selection at IIM Rohtak and IIM Jammu</li>
-            <li>2nd place in inter-school dance competition</li>
-            <li>District-level football player</li>
-            <li>Selected for AGILE Workshop at Hiroshima University</li>
+            <li>Winner of Groove in Nova '24 competition</li>
+            <li>Admitted to IIM Bangalore, Rohtak and Jammu</li>
+            <li>2nd position in inter-school dance competition</li>
+            <li>Represented district in football tournaments</li>
           </ul>
         </section>
 
         <section class="section">
           <h2 class="section-title"><i class="fas fa-code"></i>Skills</h2>
           <div class="skills-container">
-            <span class="skill">Communication</span>
-            <span class="skill">Teamwork</span>
+            <span class="skill">Business Communication</span>
+            <span class="skill">Team Leadership</span>
             <span class="skill">Problem Solving</span>
             <span class="skill">Time Management</span>
             <span class="skill">Public Speaking</span>
