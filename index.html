@@ -1,36 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arin Prakash | IIM Bangalore Student</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arin Prakash | Digital Business Scholar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     :root {
-      /* Primary Color Palette */
-      --primary-dark: #1a237e;     /* Dark blue */
-      --primary: #303f9f;          /* Medium blue */
-      --primary-light: #7986cb;    /* Light blue */
-      --primary-extra-light: #e8eaf6; /* Very light blue */
-      
-      /* Neutral Colors */
-      --text-dark: #212121;        /* Dark grey */
-      --text-medium: #424242;      /* Medium grey */
-      --text-light: #757575;      /* Light grey */
-      --bg: #f5f5f5;              /* Background light grey */
-      --card: #ffffff;            /* Pure white cards */
-      
-      /* Accents */
-      --accent-blue: #2196f3;      /* Bright blue for highlights */
-      --accent-green: #4caf50;     /* Green for positive elements */
-      
-      /* UI Elements */
-      --border-radius: 12px;
-      --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --transition: all 0.3s ease;
+      --maroon: #800000;
+      --gold: #FFD700;
+      --cream: #FFF5EE;
+      --dark: #2F1A1A;
     }
 
     * {
@@ -40,388 +21,280 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: var(--text-dark);
+      font-family: 'Poppins', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
       line-height: 1.6;
-      padding: 2rem;
-      background: url('https://www.iimb.ac.in/sites/default/files/styles/inner_banner/public/2021-11/iimb-campus.jpg?itok=4kY3Q9QZ') no-repeat center center fixed;
-      background-size: cover;
       position: relative;
+      z-index: 1;
     }
 
     body::before {
-      content: '';
-      position: absolute;
+      content: "";
+      position: fixed;
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(245, 245, 245, 0.92);
+      width: 100%;
+      height: 100%;
+      background-image: url('https://i.ibb.co/MxmWnBhF/OIP-1.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      opacity: 0.2;
       z-index: -1;
     }
 
-    .resume-container {
-      max-width: 900px;
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      background: var(--card);
-      border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 2rem;
     }
 
-    /* Header Section */
-    .header {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: white;
-      padding: 3rem 2.5rem;
+    header {
       text-align: center;
-      position: relative;
+      padding: 3rem 0;
+      animation: fadeIn 1s ease-in;
     }
 
-    .profile-avatar {
-      width: 120px;
-      height: 120px;
-      background-color: var(--primary-extra-light);
+    .profile {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 1rem;
+      border: 4px solid var(--maroon);
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      border: 3px solid white;
     }
 
-    .profile-avatar img {
+    .profile img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .name {
-      font-size: 2.2rem;
-      font-weight: 700;
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--maroon);
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      letter-spacing: 0.5px;
     }
 
-    .title {
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      opacity: 0.9;
-    }
-
-    .institution {
-      font-weight: 600;
-      color: var(--primary-extra-light);
-    }
-
-    .contact-info {
+    .contact-bar {
+      background: var(--maroon);
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem auto;
+      max-width: 600px;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
       flex-wrap: wrap;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
-    /* Main Content */
-    .main-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      padding: 3rem 2.5rem;
+      gap: 0.5rem;
     }
 
     .section {
-      margin-bottom: 2.5rem;
-    }
-
-    .section-title {
-      color: var(--primary);
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--primary-extra-light);
-    }
-
-    .section-title i {
-      font-size: 1.1rem;
-      color: var(--primary);
-    }
-
-    .content-card {
-      margin-bottom: 1.5rem;
-      background: var(--primary-extra-light);
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      border-left: 4px solid var(--primary);
-      transition: var(--transition);
-    }
-
-    .content-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
-    
-    .program-card {
       background: white;
-      padding: 1.2rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border-left: 3px solid var(--primary-light);
-      transition: var(--transition);
-    }
-    
-    .program-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-left-color: var(--primary);
-    }
-    
-    .program-title {
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: slideUp 0.8s ease-out;
     }
 
-    .card-title {
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .card-title i {
-      font-size: 0.9rem;
-      color: var(--primary-light);
-    }
-
-    .degree {
-      font-weight: 500;
-      color: var(--text-medium);
-    }
-
-    .styled-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .styled-list li {
-      margin-bottom: 0.6rem;
+    h2 {
+      color: var(--maroon);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1.5rem;
       position: relative;
-      padding-left: 1.5rem;
-      color: var(--text-medium);
     }
 
-    .styled-list li::before {
-      content: '•';
+    h2::after {
+      content: '';
       position: absolute;
+      bottom: -10px;
       left: 0;
-      color: var(--primary-light);
-      font-size: 1.4rem;
-      line-height: 1;
+      width: 50px;
+      height: 3px;
+      background: var(--gold);
     }
 
-    .skills-container {
+    .timeline-item {
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+      border-left: 3px solid var(--maroon);
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: var(--cream);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .interests {
       display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      justify-content: center;
     }
 
-    .skill {
-      background: var(--primary-extra-light);
-      color: var(--primary);
+    .interest-item {
+      background: var(--maroon);
+      color: white;
       padding: 0.5rem 1rem;
       border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .skill:hover {
-      background: var(--primary-light);
-      color: white;
-    }
-
-    .interests-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .interest {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background: var(--primary-extra-light);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      transition: var(--transition);
     }
 
-    .interest:hover {
-      background: var(--primary-light);
-      color: white;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
-    .interest i {
-      transition: var(--transition);
-    }
-
-    .interest:hover i {
-      color: white;
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     @media (max-width: 768px) {
-      .main-content {
-        grid-template-columns: 1fr;
-        padding: 2rem 1.5rem;
+      .container {
+        padding: 1rem;
       }
-      
-      .header {
-        padding: 2.5rem 1.5rem;
+
+      header {
+        padding: 2rem 0;
       }
-      
-      .name {
-        font-size: 1.8rem;
-      }
-      
-      .title {
-        font-size: 1.1rem;
+
+      .contact-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="resume-container">
-    <header class="header">
-      <div class="profile-avatar">
-        <img src="https://i.ibb.co/8nrnCKv1/Professional-Photo.jpg" alt="Arin Prakash">
+  <div class="container">
+    <header>
+      <div class="profile">
+        <img src="https://i.ibb.co/bRYLnSZ6/Professional-Photo.jpg" alt="Arin Prakash">
       </div>
-      <h1 class="name">Arin Prakash</h1>
-      <p class="title">BBA Student in <span class="institution">Digital Business & Entrepreneurship</span><br>at Indian Institute of Management Bangalore</p>
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <span>arinchamp11@gmail.com</span>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <span>+91 6260182260</span>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Chhatarpur, MP</span>
-        </div>
+      <h1>Arin Prakash</h1>
+      <div class="contact-bar">
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Chhatarpur, MP</span></div>
+        <div class="contact-item"><i class="fas fa-phone"></i><span>6260182260</span></div>
+        <div class="contact-item"><i class="fas fa-envelope"></i><span>arinchamp11@gmail.com</span></div>
       </div>
     </header>
 
-    <main class="main-content">
-      <!-- Left Column -->
-      <div class="left-column">
-        <section class="section">
-          <h2 class="section-title"><i class="fas fa-graduation-cap"></i>Education</h2>
-          <div class="content-card">
-            <div class="card-title"><i class="fas fa-university"></i>Indian Institute of Management Bangalore</div>
-            <p class="degree">Bachelor of Business Administration (BBA)<br>Digital Business & Entrepreneurship</p>
-            
-            <div class="program-card">
-              <div class="program-title">
-                <i class="fas fa-globe-asia"></i>
-                AGILE COIL Program
-              </div>
-              <p>Social Entrepreneurship | International Collaboration</p>
-            </div>
-          </div>
-          
-          <div class="content-card">
-            <div class="card-title"><i class="fas fa-certificate"></i>Additional Certifications</div>
-            
-            <div class="program-card">
-              <div class="program-title">
-                <i class="fas fa-brain"></i>
-                UCMAS Abacus
-              </div>
-              <p>Mental Arithmetic Certification | National Level</p>
-            </div>
-          </div>
-        </section>
+    <section class="section">
+      <h2>Professional Summary</h2>
+      <p>Motivated BBA student at IIM Bangalore with a strong foundation in digital business and entrepreneurship. Skilled in communication, leadership, and problem-solving, with practical experience in social impact projects, venture creation, and international collaboration.</p>
+    </section>
 
-        <section class="section">
-          <h2 class="section-title"><i class="fas fa-briefcase"></i>Experience</h2>
-          <div class="content-card">
-            <div class="card-title"><i class="fas fa-store"></i>ChocoBloom</div>
-            <ul class="styled-list">
-              <li>Launched and managed a self-funded chocolate venture</li>
-              <li>Handled production, branding and sales operations</li>
-            </ul>
-          </div>
-          <div class="content-card">
-            <div class="card-title"><i class="fas fa-hands-helping"></i>Mission Parivartan</div>
-            <ul class="styled-list">
-              <li>Volunteered for environmental sustainability programs</li>
-              <li>Participated in community welfare initiatives</li>
-            </ul>
-          </div>
-        </section>
+    <section class="section">
+      <h2>Education</h2>
+      <div class="timeline-item">
+        <h3>IIM Bangalore</h3>
+        <p>Bachelor of Business Administration – Digital Business & Entrepreneurship</p>
+        <p>2023 – 2027 (Expected)</p>
+        <ul style="margin-top: 1rem; list-style: none;">
+          <li>• Selected in IIM Rohtak and IIM Jammu</li>
+          <li>• Shortlisted for AGILE Workshop, Hiroshima University, Japan (Sep 2025)</li>
+        </ul>
       </div>
+    </section>
 
-      <!-- Right Column -->
-      <div class="right-column">
-        <section class="section">
-          <h2 class="section-title"><i class="fas fa-trophy"></i>Achievements</h2>
-          <ul class="styled-list">
-            <li>Winner of Groove in Nova '24 competition</li>
-            <li>Admitted to IIM Bangalore, Rohtak and Jammu</li>
-            <li>2nd position in inter-school dance competition</li>
-            <li>Represented district in football tournaments</li>
-          </ul>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title"><i class="fas fa-code"></i>Skills</h2>
-          <div class="skills-container">
-            <span class="skill">Business Communication</span>
-            <span class="skill">Team Leadership</span>
-            <span class="skill">Problem Solving</span>
-            <span class="skill">Time Management</span>
-            <span class="skill">Public Speaking</span>
-            <span class="skill">Adaptability</span>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title"><i class="fas fa-heart"></i>Interests</h2>
-          <div class="interests-container">
-            <span class="interest"><i class="fas fa-chess"></i>Snooker</span>
-            <span class="interest"><i class="fas fa-music"></i>Dancing</span>
-            <span class="interest"><i class="fas fa-cube"></i>Rubik's Cube</span>
-            <span class="interest"><i class="fas fa-futbol"></i>Football</span>
-            <span class="interest"><i class="fas fa-comments"></i>Debating</span>
-          </div>
-        </section>
+    <section class="section">
+      <h2>Experience & Projects</h2>
+      <div class="timeline-item">
+        <h3>Mission Parivartan – NGO Volunteer</h3>
+        <p>Environmental Sustainability, Chhatarpur (2017 – 2019)</p>
+        <ul style="margin-top: 1rem;">
+          <li>• Led plantation drives and awareness campaigns</li>
+          <li>• Distributed food/water to stray animals</li>
+          <li>• Managed plant nursery operations</li>
+        </ul>
       </div>
-    </main>
+      <div class="timeline-item">
+        <h3>Zero-Budget Venture – Snooker Coaching</h3>
+        <p>2025</p>
+        <ul style="margin-top: 1rem;">
+          <li>• Designed and implemented coaching module</li>
+          <li>• Promoted and taught snooker with no capital</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>AGILE COIL Program – Social Entrepreneurship</h3>
+        <p>Course 4 – 2025</p>
+        <ul style="margin-top: 1rem;">
+          <li>• Collaborated on sustainable urban solutions</li>
+          <li>• Proposed social venture for elderly support</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><h3>Public Speaking & Communication</h3></div>
+        <div class="skill-card"><h3>Leadership & Teamwork</h3></div>
+        <div class="skill-card"><h3>Adaptability & Time Management</h3></div>
+        <div class="skill-card"><h3>Social Entrepreneurship</h3></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Achievements</h2>
+      <div class="timeline-item">
+        <ul style="list-style: none;">
+          <li>🏆 House Captain – Maria Mata Convent Sr. Sec. School</li>
+          <li>⚽ District-level Football Player</li>
+          <li>🏅 Runner-up – Inter-school Dance Competition</li>
+          <li>🧮 UCMAS Abacus Graduate</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Interests</h2>
+      <div class="interests">
+        <div class="interest-item"><i class="fas fa-chess"></i><span>Snooker</span></div>
+        <div class="interest-item"><i class="fas fa-music"></i><span>Dancing</span></div>
+        <div class="interest-item"><i class="fas fa-cube"></i><span>Rubik’s Cube</span></div>
+        <div class="interest-item"><i class="fas fa-comments"></i><span>Debating</span></div>
+      </div>
+    </section>
   </div>
 </body>
 </html>
